@@ -12,12 +12,12 @@ class Signature < ApplicationRecord
     draw = Magick::Draw.new
     draw.pointsize   = 20
     draw.fill        = '#000000'
-    draw.gravity     = Magick::NorthGravity
+    draw.gravity     = Magick::NorthWestGravity
     draw.font_weight = 100
     draw.font_family = 'Arial'
     draw.font_style  = Magick::NormalStyle
 
-    static_signature_metrics = draw.get_type_metrics(self.static_signature)
+    static_signature_metrics = draw.get_multiline_type_metrics(self.static_signature)
     pronouns_metrics = draw.get_type_metrics(pronouns)
 
     image = Magick::Image.new(

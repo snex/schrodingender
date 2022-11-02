@@ -82,5 +82,3 @@ test:
 production:
   <<: *default
   database: email_sig_production
-  username: email_sig
-  password: <%= ENV['EMAIL_SIG_DATABASE_PASSWORD'] %>

@@ -19,8 +19,11 @@ class RainbowAnnotator
 
     text.each_char do |char|
       if char == '/'
+        draw.stroke_width = 0.0
         draw.fill = '#000000'
       else
+        draw.stroke = '#000000'
+        draw.stroke_width = 0.01
         draw.fill = colors.next
       end
 

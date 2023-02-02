@@ -81,4 +81,7 @@ test:
 #
 production:
   <<: *default
-  database: email_sig_production
+  host: <%= Rails.application.credentials.dig(:production, :postgres_host) %>
+  database: <%= Rails.application.credentials.dig(:production, :postgres_dbname) %>
+  username: <%= Rails.application.credentials.dig(:production, :postgres_username) %>
+  password: <%= Rails.application.credentials.dig(:production, :postgres_password) %>

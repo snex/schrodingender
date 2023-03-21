@@ -49,7 +49,7 @@ class Signature < ApplicationRecord
     draw.fill        = '#000000'
     draw.gravity     = Magick::NorthWestGravity
     draw.font_weight = 100
-    draw.font_family = 'Arial'
+    draw.font_family = 'DejaVu Sans Mono'
     draw.font_style  = Magick::NormalStyle
 
     return draw
